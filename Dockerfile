@@ -2,8 +2,8 @@ FROM node:8
 
 COPY . .
 
-RUN nmp install \ 
-	&& nmp run build
+RUN npm install \ 
+	&& npm run build
 
 EXPOSE 3000
 
