@@ -45,6 +45,3 @@ npm run wdio
 ### Copyright and license
 
 The MIT License (MIT). Please see License File for more information.
-
-Try to trigger
-Try to trigger from janpapez123
