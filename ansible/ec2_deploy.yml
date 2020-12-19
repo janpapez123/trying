@@ -14,9 +14,9 @@
         wait: yes
         count: 1
         group: eshop
-        aws_access_key: "ASIAWLMA2LRWSXSQKRQ4"
-        aws_secret_key: "zBX6mGbAP4wwszQwFrdIk24u1PIcgyzHTg5MV7aq"
-        security_token: "FwoGZXIvYXdzEM3//////////wEaDMNsJ5QB3UsfNGWkeSLEAT65NVOIeF+iCA/G/cpYmFwa3w1dWyDGAPyPlfaICDBK7WNmraSrEnAGHTVWqA9Vvon1sPiP4eg3Rh417/AwFdmHnMDrecbWnbiK7hZ5+v1S6Ofy/Y96DUsJdzxz/ls059AX5tWLYHllP6+rJVjIZMbn3CNTD04ah9Dr8spN+6JtqbM7yMDlS09DHHU1IaKVAjw8/mKxGJt2mAuG1W5mHbP9uhGT8NmtermPupfP4tCfLy2f+iScg9cgB8bOd6ylrxQ3KS0o6LP5/gUyLTtDYmfsqXhksidBWzFFD/m/JPA8yfnqa9csot7j0uVBf6ykpCwhrrG4IHkMNA=="
+        aws_access_key: "ASIAWLMA2LRWWWTWVTPR"
+        aws_secret_key: "p6URpR5pdcNp7fsCUV1daLzZyce0/VOXVeEhLfGH"
+        security_token: "FwoGZXIvYXdzENH//////////wEaDL40vSExsyUYCwRr7SLEAd14wRjEOSW43ef/G+aAEmrdx0/tKLayj10xllKGoBQOUD0EPd3dqxDum3QyWR1BqpFW3603NA/IonIC3PTGdcGwl8Mcd/oWmQ5O6R0FsCJ4nDgFQlsv5bmxBnQ/ZrJn30SXGSLU2+FNq1/d9nZQzicM6VFg6tyhGSYQ/lbsL7ZI8oPB7nLg9EPn+zkMovD1JAgXmrsLez+wrwoFYnHMlMrWI0T74IbnoiZ9cEt7hwdrue+ZwrDqKdTIRt/IX1XHQpFnNAMo75z6/gUyLZryvZmFz3Sai/3n6HmD+uHhMQJ9cG280buLKL0Nsmp6wvl9pli8XTGix3GYwg=="
       register: ec2
 
     - name: Add instance
