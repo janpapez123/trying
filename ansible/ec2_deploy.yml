@@ -47,7 +47,7 @@
       git:
         repo: 'https://github.com/janpapez123/trying.git'
         dest: ./app
-    - name: Building docker with eshop-semestralka
+    - name: Building docker with eshop
       shell: cd app && docker build -t myeshop:latest .
       become: yes
     - name: Running Docker with eshop
