@@ -34,7 +34,7 @@ jobs:
          fingerprints:
           - "23:25:81:d3:c0:8e:28:7c:0e:0d:c9:00:c0:07:e3:20:3c:34:af:19"
       - ansible-playbook/playbook:
-          playbook: ansible/ec2_deploy.yml
+          playbook: ./ansible/ec2_deploy.yml
           playbook-options: --user ubuntu
 workflows:
   build:
