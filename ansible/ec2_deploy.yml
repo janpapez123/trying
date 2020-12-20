@@ -28,7 +28,6 @@
 
 - name: Configure EC2
   hosts: launched
-  gather_facts: no
   connection: ssh
 
   tasks:
