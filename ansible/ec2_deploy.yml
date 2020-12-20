@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: Identify running instances
+    - name: Identify running instances for termination
       ec2_instance_info:
         region: us-east-1
         aws_access_key: "ASIAWLMA2LRWQWHGWA7Y"
