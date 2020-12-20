@@ -29,14 +29,12 @@ jobs:
       - ansible-playbook/install
       - run:
          command: |
-          sudo pip install boto boto3
+          sudo pip install ansible boto boto3
       - add_ssh_keys:
          fingerprints:
           - "23:25:81:d3:c0:8e:28:7c:0e:0d:c9:00:c0:07:e3:20:3c:34:af:19"
-      - run: echo $PEM_FILE | tr , '\n' > accessKey.pem
-      - run: chmod 400 accessKey.pem
       - ansible-playbook/playbook:
-          playbook: ./ansible/ec2_deploy.yml --key-file accessKey.pem
+          playbook: ./ansible/ec2_deploy.yml
           playbook-options: --user ubuntu
 workflows:
   build:
