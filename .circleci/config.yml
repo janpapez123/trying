@@ -32,6 +32,7 @@ jobs:
           sudo pip install ansible boto boto3
       - run: echo $SSH_PRIVATE_KEY | sed 's/<CRLF>/\n/g' > accessKey.pem
       - run: chmod 400 accessKey.pem
+      - run: ssh-copy-id localhost
       - ansible-playbook/playbook:
           playbook: ./ansible/ec2_deploy.yml
           playbook-options: --user ubuntu --key-file accessKey.pem
