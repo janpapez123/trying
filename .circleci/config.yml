@@ -28,7 +28,7 @@ jobs:
           at: .
       - ansible-playbook/install
       - run:
-         command: |
+         command:
           sudo pip install ansible boto boto3
       - add_ssh_keys:
          fingerprints:
