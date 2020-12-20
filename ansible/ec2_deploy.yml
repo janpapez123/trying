@@ -19,10 +19,10 @@
         assign_public_ip: yes
         wait: yes
         count: 1
-        group: default
-        aws_access_key: "ASIAWLMA2LRW54SRFIJV"
-        aws_secret_key: "4KN9sab6hS7AEmAtkYM5el1uN+Pa+zgL7fKb3DCx"
-        security_token: "FwoGZXIvYXdzENr//////////wEaDF6ZdmOlJtkAQenOUSLEAVbrE51ZEZqX1Ld59dJS5FlZqi/7M1RIGhKExsmCK6AKsq60BVnuKwgt7bfvPgL2q++MPd4eP/a1mPt3FkNHIB2M5UIxOQJi2VxF6+eTRuEp+y/qV3S/bmjcJ9FgKCyAUfutXRdcj4sMGMHISMw7T/4Ue27DQBafIDAA5H8TQ4H+XYMYVXoxTk4/bqLT2HYnVVJqPL84qnVFZvz2j1veA/aLLond457pcWNxqqD8jS7zHx3K0pr29TJd81uRJSxSIERCW0Yozpb8/gUyLVEKYdxEV40OdgTAkDJ65/L1HU99X7zM2tOJs4e33hA1OaBZ9S7P1Edgd5tiXA=="
+        group: semestralka
+        aws_access_key: "ASIAWLMA2LRWQWHGWA7Y"
+        aws_secret_key: "qfX2jouAyRKnBP/lpj4gWxHaBi6ZqbASjYz7RL4D"
+        security_token: "FwoGZXIvYXdzEN3//////////wEaDC4SyrTjzBua84akeiLEAcdyTOJ+HdC2J5YihEvLvCKarUgAsZGz0V2LKyZ2hgQIG+Y3PSeIDmM25AwZXj55M8kMDJrK4iZnM8hJNQy+ex4JUR4zWYlgoiDXfDBVAkZSnMx3M+dop+zi78jvqA/u5jheU45aGgqgWMengGxcyxQe0Ucx6AnnNSXL3elY7vD+w9lzBdd4rhGAcvekGpfjPykVWBbYBtb+URO7SsJKPN5+rs4TOXtxYxtn+RANkYEfRTtsUreybHAcrYdg8OMz0omkzpQo6/f8/gUyLb0IVeM0Tc0Ve5gmwC9mRtoWuePMfA1ZYQq8gnxxM/gkW5frPx/3llAeVtCV1g=="
       register: ec2
 
     - name: Add instance to host
