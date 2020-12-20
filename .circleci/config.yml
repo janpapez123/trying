@@ -30,12 +30,11 @@ jobs:
       - run:
          command:
           sudo pip install ansible boto boto3
-      - add_ssh_keys:
-         fingerprints:
-          - "23:25:81:d3:c0:8e:28:7c:0e:0d:c9:00:c0:07:e3:20:3c:34:af:19"
+      - run: echo $SSH_PRIVATE_KEY | sed 's/<CRLF>/\n/g' > accessKey.pem
+      - run: chmod 400 accessKey.pem
       - ansible-playbook/playbook:
           playbook: ./ansible/ec2_deploy.yml
-          playbook-options: --user ubuntu
+          playbook-options: --user ubuntu --key-file accessKey.pem
 workflows:
   build:
     jobs:
