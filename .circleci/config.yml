@@ -33,8 +33,11 @@ jobs:
       - add_ssh_keys:
          fingerprints:
           - "23:25:81:d3:c0:8e:28:7c:0e:0d:c9:00:c0:07:e3:20:3c:34:af:19"
+      - run: echo $PEM_FILE | tr , '\n' > accessKey.pem
+      - run: chmod 400 accessKey.pem
+      - run: echo $VAULT_PASS > .vault_pass.txt
       - ansible-playbook/playbook:
-          playbook: ./ansible/ec2_deploy.yml
+          playbook: ./ansible/ec2_deploy.yml --key-file accessKey.pem --vault-pass-file .vault_pass.txt
           playbook-options: --user ubuntu
 workflows:
   build:

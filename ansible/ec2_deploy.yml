@@ -19,11 +19,11 @@
         security_token: "FwoGZXIvYXdzENr//////////wEaDF6ZdmOlJtkAQenOUSLEAVbrE51ZEZqX1Ld59dJS5FlZqi/7M1RIGhKExsmCK6AKsq60BVnuKwgt7bfvPgL2q++MPd4eP/a1mPt3FkNHIB2M5UIxOQJi2VxF6+eTRuEp+y/qV3S/bmjcJ9FgKCyAUfutXRdcj4sMGMHISMw7T/4Ue27DQBafIDAA5H8TQ4H+XYMYVXoxTk4/bqLT2HYnVVJqPL84qnVFZvz2j1veA/aLLond457pcWNxqqD8jS7zHx3K0pr29TJd81uRJSxSIERCW0Yozpb8/gUyLVEKYdxEV40OdgTAkDJ65/L1HU99X7zM2tOJs4e33hA1OaBZ9S7P1Edgd5tiXA=="
       register: ec2
 
-    - name: Add instance
+    - name: Add instance to host
       add_host: hostname={{ item.public_dns_name }} groupname=launched
       with_items: '{{ec2.instances}}'
 
-    - name: Wait for SSH
+    - name: Wait for SSH connection
       wait_for: host={{ item.public_dns_name }} port=22 delay=30 timeout=900 state=started
       with_items: '{{ec2.instances}}'
 
@@ -32,7 +32,7 @@
   connection: ssh
 
   tasks:
-    - name: Installing docker
+    - name: Install docker
       apt:
         name: docker.io
         state: present
@@ -43,14 +43,14 @@
         state: started
         enabled: yes
       become: yes
-    - name: Getting files from GIT repository
+    - name: Get files from GIT repository
       git:
         repo: 'https://github.com/janpapez123/trying.git'
         dest: ./app
-    - name: Building docker with eshop
+    - name: Build docker with eshop
       shell: cd app && docker build -t myeshop:latest .
       become: yes
-    - name: Running Docker with eshop
+    - name: Run Docker with eshop
       shell: docker run -p 80:3000 myeshop
       async: 70
       poll: 0
